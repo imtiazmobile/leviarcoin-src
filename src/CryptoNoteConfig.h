@@ -27,7 +27,7 @@ namespace parameters {
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x76; // addresses start with "L"
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x252d79; // addresses start with "intu"
 const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 60;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
@@ -89,15 +89,15 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "leviarcoin";
+const char     CRYPTONOTE_NAME[]                             = "intucoin";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
-const uint8_t  BLOCK_MAJOR_VERSION_2                         =  1;
+const uint8_t  BLOCK_MAJOR_VERSION_2                         =  2;
 const uint8_t  BLOCK_MINOR_VERSION_0                         =  0;
 
 const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by default, blocks ids count in synchronizing
-const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  300;    //by default, blocks count in blocks downloading
+const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  20;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
 const int      P2P_DEFAULT_PORT                              = 18001;
@@ -120,10 +120,11 @@ const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          //
 const char     P2P_STAT_TRUSTED_PUB_KEY[] = "8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115";
 
 const char* const SEED_NODES[] = {
-	"46.101.28.201:18001",
-	"138.68.176.26:18001",
-	"138.68.58.151:18001",
-	"185.111.216.136:18001",
+	 "140.82.29.104:18001",
+          "45.77.160.124:18001",
+	 "45.77.178.125:18001",
+	 "45.77.178.125:18001",
+	 "77.93.206.165:18001",
 };
 
 struct CheckpointData {
@@ -132,21 +133,7 @@ struct CheckpointData {
 };
 
 const CheckpointData CHECKPOINTS[] = {
-	{ 10000, "02ff33848a071b41cd7db0d9a0778c4c8af7fdb6584b6025f31fb690bd20bc6f" },
-	{ 22940, "e35bbbb6b076f12978b67b4be72b23b1ec779ebb9f3293903228a52d1e2b6acc" },
-	{ 30000, "8104c5d16b45b522dfa3c2b995231647d4eff95d6139c8502a74fa59cfacb419" },
-	{ 40000, "20e8704c80b0e3d1d4acf862b30d3542f4ca15bab8b1c775efb10999d1366205" },
-	{ 50000, "c505294e2210788d6178ea771fa27d3d965113712672480d2d689fd1859b9523" },
-	{ 60000, "77b43f2fb5d601a901a8fd5be759cc328524d866d241b02fb187d6236dd92101" },
-	{ 70000, "d090d17b651e6263df8b15bfb18d9234d3accb12d46b40db8cfdb8b4df38afcc" },
-	{ 80000, "8fbd3664fa660a349fd2bc7e06e9f4fe61854b045d06b59debf043e8f43a21d4" },
-	{ 90000, "cf6ae584cf3fc5b6f0bf720dc8d14862a7f4bf1c31a96a6cf0fe9efdc01cdd2c" },
-	{ 100000, "11c6ded68b72396c128ebb67e66458c5f4a64e7cadfca0cd9c00fc3aadc592be" },
-	{ 120000, "4d991f53a17b3589adcd71e5a3addb745729cb04299fad3b07828e9429b9a032" },
-	{ 150000, "44817f03ad52483861fff29b30112be36efe9a9b106321852ebb5c89cd883dd8" },
-	{ 200000, "b29e34bef7b0179b4defe94519b78507def44ebc329881552f14637bb3f377d8" },
-	{ 220000, "41ed057749ad9cab36f29e37233068d461d38f46f1d4e98f76fdded51d6904f6" },
-	{ 250001, "c4b96c8c66c44aa9aaed5a37e05754efc895ef97be19ac0775d4bea9cdef19a2" }
+	
 };
 } // CryptoNote
 
